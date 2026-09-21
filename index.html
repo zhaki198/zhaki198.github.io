@@ -1,0 +1,563 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>外联部演讲稿 - 大学生社团招新与活动策划写作指南</title>
+    <meta name="description" content="本文提供专业、实用的外联部演讲稿模板与写作技巧。涵盖面试自我介绍、竞选部长发言、活动赞助策划书等场景，帮助学生提升沟通能力，成功加入外联部或提升部门影响力。">
+    <meta name="keywords" content="外联部演讲稿,大学社团竞选,学生会外联部,演讲稿模板,活动赞助策划">
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #2563eb;
+            --primary-dark: #1e40af;
+            --secondary-color: #f97316;
+            --bg-color: #f8fafc;
+            --text-main: #1e293b;
+            --text-secondary: #64748b;
+            --card-bg: #ffffff;
+            --border-radius: 8px;
+            --shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+        }
+
+        /* Layout */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background-color: var(--card-bg);
+            box-shadow: var(--shadow);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 20px;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: var(--text-main);
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--primary-color);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--primary-dark) 100%);
+            color: white;
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            max-width: 700px;
+            margin: 0 auto 30px;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: var(--secondary-color);
+            color: white;
+            padding: 12px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 15px -3px rgba(249, 115, 22, 0.4);
+        }
+
+        /* Content Structure */
+        .main-content {
+            padding: 60px 0;
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 40px;
+        }
+
+        /* Sidebar */
+        aside {
+            position: sticky;
+            top: 100px;
+            height: fit-content;
+        }
+
+        .category-card {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            padding: 20px;
+            margin-bottom: 20px;
+        }
+
+        .category-card h3 {
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+            border-left: 4px solid var(--primary-color);
+            padding-left: 10px;
+        }
+
+        .category-list {
+            list-style: none;
+        }
+
+        .category-list li {
+            margin-bottom: 10px;
+        }
+
+        .category-list a {
+            display: block;
+            padding: 8px 12px;
+            border-radius: 4px;
+            text-decoration: none;
+            color: var(--text-secondary);
+            transition: all 0.2s;
+        }
+
+        .category-list a:hover, .category-list a.active {
+            background-color: #eff6ff;
+            color: var(--primary-color);
+            font-weight: 500;
+        }
+
+        /* Articles Grid */
+        .articles-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 25px;
+        }
+
+        .article-card {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            overflow: hidden;
+            transition: transform 0.3s;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .article-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card-image {
+            height: 160px;
+            background-color: #e2e8f0;
+            position: relative;
+        }
+
+        .card-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .tag {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            background-color: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 4px 8px;
+            border-radius: 4px;
+            font-size: 0.8rem;
+        }
+
+        .card-content {
+            padding: 20px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card-title {
+            font-size: 1.2rem;
+            margin-bottom: 10px;
+            color: var(--text-main);
+        }
+
+        .card-excerpt {
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            margin-bottom: 20px;
+            flex-grow: 1;
+        }
+
+        .read-more {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            display: inline-flex;
+            align-items: center;
+        }
+
+        .read-more::after {
+            content: '→';
+            margin-left: 5px;
+            transition: margin-left 0.2s;
+        }
+
+        .read-more:hover::after {
+            margin-left: 10px;
+        }
+
+        /* Detailed Article View (Hidden by default logic, but we show structure for SEO) */
+        .article-detail {
+            background: var(--card-bg);
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            padding: 40px;
+            margin-bottom: 40px;
+        }
+
+        .detail-header {
+            margin-bottom: 30px;
+            border-bottom: 1px solid #e2e8f0;
+            padding-bottom: 20px;
+        }
+
+        .detail-meta {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            margin-bottom: 10px;
+        }
+
+        .detail-content h2 {
+            font-size: 1.8rem;
+            margin: 30px 0 20px;
+            color: var(--text-main);
+        }
+
+        .detail-content h3 {
+            font-size: 1.4rem;
+            margin: 25px 0 15px;
+            color: var(--text-main);
+        }
+
+        .detail-content p {
+            margin-bottom: 20px;
+            color: #334155;
+        }
+
+        .detail-content ul {
+            margin-left: 20px;
+            margin-bottom: 20px;
+        }
+
+        .detail-content li {
+            margin-bottom: 8px;
+            color: #334155;
+        }
+
+        .highlight-box {
+            background-color: #eff6ff;
+            border-left: 4px solid var(--primary-color);
+            padding: 20px;
+            margin: 30px 0;
+            border-radius: 0 var(--border-radius) var(--border-radius) 0;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #1e293b;
+            color: #94a3b8;
+            padding: 60px 0 20px;
+            margin-top: 60px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h4 {
+            color: white;
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+
+        .footer-col ul {
+            list-style: none;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a {
+            color: #94a3b8;
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .footer-col ul li a:hover {
+            color: white;
+        }
+
+        .copyright {
+            text-align: center;
+            border-top: 1px solid #334155;
+            padding-top: 20px;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .main-content {
+                grid-template-columns: 1fr;
+            }
+
+            aside {
+                position: static;
+                margin-bottom: 30px;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .nav-wrapper {
+                flex-direction: column;
+                height: auto;
+                padding: 15px 0;
+                gap: 15px;
+            }
+
+            nav ul {
+                gap: 15px;
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="container nav-wrapper">
+        <a href="#" class="logo">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
+            社团演讲稿库
+        </a>
+        <nav>
+            <ul>
+                <li><a href="#">首页</a></li>
+                <li><a href="#">部门简介</a></li>
+                <li><a href="#">演讲技巧</a></li>
+                <li><a href="#">赞助策划</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<section class="hero">
+    <div class="container">
+        <h1>外联部演讲稿</h1>
+        <p>从自我介绍到活动策划，为您提供全场景的外联部演讲与写作指南，助您在面试与工作中脱颖而出。</p>
+        <a href="#content" class="cta-button">开始阅读</a>
+    </div>
+</section>
+
+<main class="container main-content" id="content">
+    <aside>
+        <div class="category-card">
+            <h3>演讲场景</h3>
+            <ul class="category-list">
+                <li><a href="#" class="active">招新面试自我介绍</a></li>
+                <li><a href="#">竞选部长发言稿</a></li>
+                <li><a href="#">部门工作述职</a></li>
+                <li><a href="#">对外联络沟通</a></li>
+            </ul>
+        </div>
+        <div class="category-card">
+            <h3>写作指南</h3>
+            <ul class="category-list">
+                <li><a href="#">破冰技巧与开场白</a></li>
+                <li><a href="#">如何展现沟通优势</a></li>
+                <li><a href="#">演讲稿结构模板</a></li>
+                <li><a href="#">常见问答预演</a></li>
+            </ul>
+        </div>
+    </aside>
+
+    <div class="articles-wrapper">
+        
+        <!-- Featured Article -->
+        <article class="article-detail">
+            <header class="detail-header">
+                <div class="detail-meta">发布时间：2023年10月 | 分类：招新面试</div>
+                <h1>外联部招新面试自我介绍全攻略</h1>
+            </header>
+            <div class="detail-content">
+                <p>在外联部的面试中，自我介绍是给面试官留下的第一印象，也是决定你能否通过初筛的关键环节。外联部是一个需要极高情商、沟通能力和抗压能力的部门，因此你的演讲稿必须体现出这些特质。</p>
+                
+                <div class="highlight-box">
+                    <strong>核心要点：</strong> 不要背诵简历，要展示“人岗匹配”的潜力。
+                </div>
+
+                <h2>一、开场白：制造记忆点</h2>
+                <p>传统的“大家好，我叫XXX”已经过时了。尝试用一句简短的话或一个小故事来破冰。例如：</p>
+                <ul>
+                    <li><strong>幽默式：</strong> “大家好，我是XXX，虽然我名字听起来很严肃，但我希望能为大家带来最幽默的外联体验。”</li>
+                    <li><strong>特质式：</strong> “大家好，我是XXX，我最大的特点就是‘脸皮厚’（褒义），这在外联部的谈判中可是核心技能。”</li>
+                    <li><strong>反差式：</strong> “我是XXX，一个在社团里负责‘拉赞助’，在生活中负责‘打辅助’的实干派。”</li>
+                </ul>
+
+                <h2>二、中间段：展示能力与热情</h2>
+                <p>这部分需要回答两个问题：<strong>我能做什么？</strong> 和 <strong>我为什么想做？</strong></p>
+                <p>在演讲中，不要只说“我有沟通能力”，要通过举例来证明。例如：“在高中担任班长期间，我曾成功组织过一次班级与隔壁班的联谊活动，这锻炼了我的统筹和协调能力。”</p>
+                <p>同时，要表达对“外联”工作的具体理解，而不仅仅是想锻炼口才。可以提到：“外联不仅是拉赞助，更是代表社团形象，是连接校园与社会的桥梁。”</p>
+
+                <h2>三、结尾：表达决心与愿景</h2>
+                <p>结尾要有力，并表达加入的渴望。例如：“如果我有幸加入外联部，我将以最饱满的热情投入到每一次谈判和每一次活动中，为部门的发展贡献自己的力量。”</p>
+                
+                <h3>附：标准自我介绍模板</h3>
+                <pre style="background:#f1f5f9; padding:15px; border-radius:6px; overflow-x:auto; font-family:monospace;">
+尊敬的学长学姐，大家好：
+
+我是XXX，来自XX专业。今天站在这里，我希望能加入外联部。
+
+首先，我认为自己具备外联工作所需的特质：
+1. **沟通力**：我性格开朗，乐于与人打交道，善于倾听和表达。
+2. **抗压性**：面对拒绝不气馁，能够保持积极心态。
+3. **执行力**：做事有条理，能够高效完成任务。
+
+我对外联部的理解是：它是社团的“嘴”和“腿”。我渴望通过这个平台，提升自己的社交能力，同时也为社团争取更多的资源。
+
+谢谢大家！
+                </pre>
+            </div>
+        </article>
+
+        <!-- Grid Articles -->
+        <div class="articles-grid">
+            <article class="article-card">
+                <div class="card-image">
+                    <img src="https://picsum.photos/seed/union1/400/250" alt="竞选部长演讲">
+                    <span class="tag">竞选</span>
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title">外联部部长竞选演讲稿</h3>
+                    <p class="card-excerpt">从干事到部长，需要具备怎样的格局？本文提供部长竞选演讲的框架与核心话术，帮助你带领团队突破瓶颈。</p>
+                    <a href="#" class="read-more">阅读全文</a>
+                </div>
+            </article>
+
+            <article class="article-card">
+                <div class="card-image">
+                    <img src="https://picsum.photos/seed/union2/400/250" alt="赞助策划">
+                    <span class="tag">策划</span>
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title">活动赞助策划书撰写指南</h3>
+                    <p class="card-excerpt">赞助是外联工作的核心。如何写出让商家满意的策划书？本文解析赞助回报、商家需求及沟通技巧。</p>
+                    <a href="#" class="read-more">阅读全文</a>
+                </div>
+            </article>
+
+            <article class="article-card">
+                <div class="card-image">
+                    <img src="https://picsum.photos/seed/union3/400/250" alt="沟通技巧">
+                    <span class="tag">技巧</span>
+                </div>
+                <div class="card-content">
+                    <h3 class="card-title">如何在外联谈判中掌握主动权</h3>
+                    <p class="card-excerpt">面对商家刁难不慌张。掌握“先听后说”和“利益交换”原则，让每一次谈判都成为合作的开始。</p>
+                    <a href="#" class="read-more">阅读全文</a>
+                </div>
+            </article>
+        </div>
+    </div>
+</main>
+
+<footer>
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h4>关于本站</h4>
+                <p style="font-size: 0.9rem; line-height: 1.8;">
+                    社团演讲稿库致力于为大学生、社团管理者提供高质量的演讲稿模板和写作指导。我们专注于提升校园组织的沟通效率与影响力。
+                </p>
+            </div>
+            <div class="footer-col">
+                <h4>快速导航</h4>
+                <ul>
+                    <li><a href="#">招新面试</a></li>
+                    <li><a href="#">工作述职</a></li>
+                    <li><a href="#">活动策划</a></li>
+                    <li><a href="#">常见问题</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>相关资源</h4>
+                <ul>
+                    <li><a href="#">社团管理手册</a></li>
+                    <li><a href="#">沟通心理学</a></li>
+                    <li><a href="#">演讲技巧视频</a></li>
+                    <li><a href="#">赞助商名录</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2023 社团演讲稿库. All Rights Reserved. 仅供学习交流使用。</p>
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>
