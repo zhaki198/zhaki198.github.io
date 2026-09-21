@@ -1,0 +1,887 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="日照个人二手房网提供日照二手房房源信息查询、日照二手房出售、日照二手房买卖、日照租房等真实个人房源信息。专注日照本地房产，海量日照二手房精选，助您轻松安家。">
+    <meta name="keywords" content="日照个人二手房网,日照二手房,日照二手房出售,日照二手房买卖,日照租房,日照房产">
+    <title>日照个人二手房网-日照二手房出售与买卖信息平台</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #0056b3;
+            --secondary-color: #00a8e8;
+            --accent-color: #ff9800;
+            --text-dark: #333333;
+            --text-gray: #666666;
+            --text-light: #999999;
+            --bg-light: #f5f7fa;
+            --white: #ffffff;
+            --border-color: #e1e4e8;
+            --shadow-sm: 0 2px 4px rgba(0,0,0,0.05);
+            --shadow-md: 0 4px 12px rgba(0,0,0,0.08);
+            --radius: 8px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background-color: var(--white);
+            box-shadow: var(--shadow-sm);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-top {
+            background-color: #f8f9fa;
+            border-bottom: 1px solid var(--border-color);
+            font-size: 14px;
+            color: var(--text-gray);
+            padding: 8px 0;
+        }
+
+        .header-top .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .header-main {
+            padding: 20px 0;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-size: 28px;
+            font-weight: 700;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo span {
+            font-size: 16px;
+            font-weight: 400;
+            color: var(--text-gray);
+        }
+
+        .search-box {
+            flex: 1;
+            max-width: 600px;
+            margin: 0 40px;
+            display: flex;
+            background: var(--white);
+            border: 1px solid var(--border-color);
+            border-radius: 30px;
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .search-box input {
+            flex: 1;
+            border: none;
+            padding: 12px 20px;
+            font-size: 15px;
+            outline: none;
+        }
+
+        .search-box button {
+            background-color: var(--primary-color);
+            color: var(--white);
+            border: none;
+            padding: 0 30px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background 0.3s;
+        }
+
+        .search-box button:hover {
+            background-color: #004494;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 25px;
+        }
+
+        .nav-links a {
+            font-size: 16px;
+            font-weight: 500;
+            color: var(--text-dark);
+            padding: 8px 0;
+            position: relative;
+        }
+
+        .nav-links a:hover, .nav-links a.active {
+            color: var(--primary-color);
+        }
+
+        .nav-links a.active::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background-color: var(--primary-color);
+        }
+
+        /* Banner */
+        .hero {
+            position: relative;
+            height: 400px;
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--secondary-color) 100%);
+            border-radius: var(--radius);
+            margin: 20px auto;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--white);
+            text-align: center;
+        }
+
+        .hero-content h1 {
+            font-size: 36px;
+            margin-bottom: 15px;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.2);
+        }
+
+        .hero-content p {
+            font-size: 18px;
+            opacity: 0.9;
+            margin-bottom: 25px;
+        }
+
+        .cta-btn {
+            display: inline-block;
+            background-color: var(--accent-color);
+            color: var(--white);
+            padding: 12px 35px;
+            border-radius: 30px;
+            font-size: 16px;
+            font-weight: 600;
+            box-shadow: 0 4px 15px rgba(255, 152, 0, 0.4);
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+
+        .cta-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(255, 152, 0, 0.6);
+        }
+
+        /* Stats Section */
+        .stats-section {
+            background: var(--white);
+            padding: 30px 0;
+            margin-top: 20px;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow-sm);
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            text-align: center;
+        }
+
+        .stat-item h3 {
+            font-size: 28px;
+            color: var(--primary-color);
+            margin-bottom: 5px;
+        }
+
+        .stat-item p {
+            color: var(--text-gray);
+            font-size: 14px;
+        }
+
+        /* Main Content Layout */
+        .main-layout {
+            display: grid;
+            grid-template-columns: 2.5fr 1fr;
+            gap: 25px;
+            margin-top: 30px;
+        }
+
+        /* Section Styles */
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid var(--border-color);
+        }
+
+        .section-title {
+            font-size: 20px;
+            font-weight: 700;
+            color: var(--text-dark);
+            border-left: 4px solid var(--primary-color);
+            padding-left: 12px;
+        }
+
+        .view-all {
+            font-size: 14px;
+            color: var(--primary-color);
+        }
+
+        /* Listing Cards */
+        .listings-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: var(--white);
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+            transition: transform 0.3s, box-shadow 0.3s;
+            border: 1px solid transparent;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-md);
+            border-color: var(--border-color);
+        }
+
+        .card-img {
+            height: 200px;
+            background-color: #eee;
+            position: relative;
+        }
+
+        .card-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .card-tag {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            background-color: rgba(0, 86, 179, 0.9);
+            color: var(--white);
+            padding: 4px 10px;
+            font-size: 12px;
+            border-radius: 4px;
+        }
+
+        .card-body {
+            padding: 15px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card-price {
+            font-size: 22px;
+            color: #e63946;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+
+        .card-price small {
+            font-size: 14px;
+            color: var(--text-gray);
+            font-weight: 400;
+        }
+
+        .card-title {
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: var(--text-dark);
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .card-features {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 15px;
+            font-size: 13px;
+            color: var(--text-gray);
+        }
+
+        .feature-item {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        .feature-item svg {
+            width: 14px;
+            height: 14px;
+            fill: var(--text-gray);
+        }
+
+        .card-footer {
+            margin-top: auto;
+            padding-top: 10px;
+            border-top: 1px solid #f0f0f0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 12px;
+            color: var(--text-light);
+        }
+
+        .card-footer .agent {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        .agent-avatar {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            background-color: #ddd;
+        }
+
+        /* Sidebar */
+        .sidebar-card {
+            background: var(--white);
+            border-radius: var(--radius);
+            padding: 20px;
+            margin-bottom: 25px;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .filter-list li {
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .filter-list li:last-child {
+            border-bottom: none;
+        }
+
+        .filter-list a {
+            display: flex;
+            justify-content: space-between;
+            padding: 12px 0;
+            font-size: 14px;
+            color: var(--text-dark);
+        }
+
+        .filter-list a:hover {
+            color: var(--primary-color);
+            padding-left: 5px;
+            transition: padding 0.2s;
+        }
+
+        .filter-count {
+            background-color: #f0f0f0;
+            padding: 2px 8px;
+            border-radius: 10px;
+            font-size: 12px;
+            color: var(--text-gray);
+        }
+
+        .notice-list li {
+            padding: 12px 0;
+            border-bottom: 1px solid #f0f0f0;
+            font-size: 13px;
+            display: flex;
+            gap: 8px;
+        }
+
+        .notice-list li:last-child {
+            border-bottom: none;
+        }
+
+        .notice-icon {
+            color: var(--accent-color);
+            flex-shrink: 0;
+        }
+
+        /* Guide Section */
+        .guide-section {
+            background: var(--white);
+            border-radius: var(--radius);
+            padding: 25px;
+            margin-top: 30px;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .guide-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+        }
+
+        .guide-item {
+            text-align: center;
+            padding: 15px;
+            border: 1px solid var(--border-color);
+            border-radius: var(--radius);
+            transition: all 0.3s;
+        }
+
+        .guide-item:hover {
+            border-color: var(--primary-color);
+            background-color: #f0f7ff;
+        }
+
+        .guide-icon {
+            width: 60px;
+            height: 60px;
+            background-color: #e3f2fd;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 15px;
+            color: var(--primary-color);
+        }
+
+        .guide-icon svg {
+            width: 30px;
+            height: 30px;
+        }
+
+        .guide-item h4 {
+            font-size: 16px;
+            margin-bottom: 8px;
+        }
+
+        .guide-item p {
+            font-size: 13px;
+            color: var(--text-gray);
+        }
+
+        /* Footer */
+        footer {
+            background-color: #2c3e50;
+            color: #bdc3c7;
+            padding: 50px 0 20px;
+            margin-top: 50px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h4 {
+            color: var(--white);
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a:hover {
+            color: var(--white);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            font-size: 14px;
+        }
+
+        /* Responsive */
+        @media (max-width: 992px) {
+            .main-layout {
+                grid-template-columns: 1fr;
+            }
+            .stats-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .guide-grid {
+                grid-template-columns: 1fr;
+            }
+            .footer-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .header-top {
+                display: none;
+            }
+            .header-main {
+                flex-direction: column;
+                gap: 15px;
+            }
+            .search-box {
+                width: 100%;
+                margin: 0;
+            }
+            .nav-links {
+                width: 100%;
+                justify-content: space-between;
+                overflow-x: auto;
+                padding-bottom: 5px;
+            }
+            .hero {
+                height: 300px;
+            }
+            .hero-content h1 {
+                font-size: 26px;
+            }
+            .stats-grid {
+                grid-template-columns: 1fr;
+            }
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 顶部信息栏 -->
+    <div class="header-top">
+        <div class="container">
+            <span>欢迎访问日照个人二手房网</span>
+            <span>专注日照本地真实房源，拒绝虚假中介</span>
+        </div>
+    </div>
+
+    <!-- 头部导航 -->
+    <header>
+        <div class="container">
+            <div class="header-main">
+                <a href="#" class="logo">
+                    <svg width="32" height="32" viewBox="0 0 24 24" fill="var(--primary-color)">
+                        <path d="M12 3L2 12h3v8h6v-6h2v6h6v-8h3L12 3zm5 15h-2v-6H9v6H7v-7.81l5-4.5 5 4.5V18z"/>
+                    </svg>
+                    日照二手房网 <span>日照个人二手房网</span>
+                </a>
+                
+                <div class="search-box">
+                    <input type="text" placeholder="搜索小区、商圈、学区或具体房源...">
+                    <button>搜索</button>
+                </div>
+
+                <nav class="nav-links">
+                    <a href="#" class="active">首页</a>
+                    <a href="#">二手房出售</a>
+                    <a href="#">二手房求购</a>
+                    <a href="#">日照租房</a>
+                    <a href="#">日照学区房</a>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <main class="container">
+        <!-- Hero Banner -->
+        <section class="hero">
+            <div class="hero-content">
+                <h1>日照个人二手房，真实房源首选</h1>
+                <p>连接日照房主与购房者，海量个人房源信息，拒绝中介差价</p>
+                <a href="#" class="cta-btn">立即发布房源</a>
+            </div>
+        </section>
+
+        <!-- 数据统计 -->
+        <section class="stats-section">
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <h3>12,580+</h3>
+                    <p>在售二手房</p>
+                </div>
+                <div class="stat-item">
+                    <h3>8,420+</h3>
+                    <p>今日新增房源</p>
+                </div>
+                <div class="stat-item">
+                    <h3>35,000+</h3>
+                    <p>日照本地注册用户</p>
+                </div>
+                <div class="stat-item">
+                    <h3>98%</h3>
+                    <p>房源真实性认证</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- 双栏布局 -->
+        <div class="main-layout">
+            <!-- 左侧：房源列表 -->
+            <section class="listings-area">
+                <div class="section-header">
+                    <h2 class="section-title">日照热门二手房推荐</h2>
+                    <a href="#" class="view-all">查看更多 &gt;</a>
+                </div>
+
+                <div class="listings-grid">
+                    <!-- 房源卡片 1 -->
+                    <article class="card">
+                        <div class="card-img">
+                            <img src="https://picsum.photos/seed/rizhao1/400/300" alt="日照市东港区二手房房源">
+                            <span class="card-tag">急售</span>
+                        </div>
+                        <div class="card-body">
+                            <div class="card-price">168<span>万</span></div>
+                            <h3 class="card-title">东港区·青岛路附近·三室两厅·精装修</h3>
+                            <div class="card-features">
+                                <span class="feature-item"><svg viewBox="0 0 24 24"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg> 98㎡</span>
+                                <span class="feature-item"><svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg> 南北通透</span>
+                                <span class="feature-item"><svg viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/></svg> 3室2厅</span>
+                            </div>
+                            <div class="card-footer">
+                                <span>发布于 2小时前</span>
+                                <div class="agent">
+                                    <img src="https://picsum.photos/seed/user1/40/40" alt="房主头像" class="agent-avatar">
+                                    <span>房主直租</span>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- 房源卡片 2 -->
+                    <article class="card">
+                        <div class="card-img">
+                            <img src="https://picsum.photos/seed/rizhao2/400/300" alt="日照市开发区二手房房源">
+                        </div>
+                        <div class="card-body">
+                            <div class="card-price">215<span>万</span></div>
+                            <h3 class="card-title">开发区·天津路·两室一厅·满五唯一</h3>
+                            <div class="card-features">
+                                <span class="feature-item"><svg viewBox="0 0 24 24"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg> 89㎡</span>
+                                <span class="feature-item"><svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg> 近地铁</span>
+                                <span class="feature-item"><svg viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/></svg> 2室1厅</span>
+                            </div>
+                            <div class="card-footer">
+                                <span>发布于 5小时前</span>
+                                <div class="agent">
+                                    <img src="https://picsum.photos/seed/user2/40/40" alt="房主头像" class="agent-avatar">
+                                    <span>房主直租</span>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- 房源卡片 3 -->
+                    <article class="card">
+                        <div class="card-img">
+                            <img src="https://picsum.photos/seed/rizhao3/400/300" alt="日照市老城区二手房房源">
+                            <span class="card-tag">降价</span>
+                        </div>
+                        <div class="card-body">
+                            <div class="card-price">145<span>万</span></div>
+                            <h3 class="card-title">老城区·兴海路·一室一厅·拎包入住</h3>
+                            <div class="card-features">
+                                <span class="feature-item"><svg viewBox="0 0 24 24"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg> 55㎡</span>
+                                <span class="feature-item"><svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg> 采光好</span>
+                                <span class="feature-item"><svg viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/></svg> 1室1厅</span>
+                            </div>
+                            <div class="card-footer">
+                                <span>发布于 昨天</span>
+                                <div class="agent">
+                                    <img src="https://picsum.photos/seed/user3/40/40" alt="房主头像" class="agent-avatar">
+                                    <span>个人房源</span>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+
+                    <!-- 房源卡片 4 -->
+                    <article class="card">
+                        <div class="card-img">
+                            <img src="https://picsum.photos/seed/rizhao4/400/300" alt="日照市高新区二手房房源">
+                        </div>
+                        <div class="card-body">
+                            <div class="card-price">320<span>万</span></div>
+                            <h3 class="card-title">高新区·北京路·四室两厅·大平层</h3>
+                            <div class="card-features">
+                                <span class="feature-item"><svg viewBox="0 0 24 24"><path d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"/></svg> 142㎡</span>
+                                <span class="feature-item"><svg viewBox="0 0 24 24"><path d="M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21z"/></svg> 景观房</span>
+                                <span class="feature-item"><svg viewBox="0 0 24 24"><path d="M11.99 2C6.47 2 2 6.48 2 12s4.47 10 9.99 10C17.52 22 22 17.52 22 12S17.52 2 11.99 2zM12 20c-4.42 0-8-3.58-8-8s3.58-8 8-8 8 3.58 8 8-3.58 8-8 8zm.5-13H11v6l5.25 3.15.75-1.23-4.5-2.67z"/></svg> 4室2厅</span>
+                            </div>
+                            <div class="card-footer">
+                                <span>发布于 3天前</span>
+                                <div class="agent">
+                                    <img src="https://picsum.photos/seed/user4/40/40" alt="房主头像" class="agent-avatar">
+                                    <span>房主直租</span>
+                                </div>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <!-- 右侧：侧边栏 -->
+            <aside class="sidebar">
+                <!-- 分类筛选 -->
+                <div class="sidebar-card">
+                    <h3 class="section-title" style="border:none; padding:0; font-size:16px; margin-bottom:15px;">区域筛选</h3>
+                    <ul class="filter-list">
+                        <li><a href="#">东港区 <span class="filter-count">4,520</span></a></li>
+                        <li><a href="#">开发区 <span class="filter-count">3,890</span></a></li>
+                        <li><a href="#">岚山区 <span class="filter-count">1,230</span></a></li>
+                        <li><a href="#">莒县 <span class="filter-count">2,100</span></a></li>
+                        <li><a href="#">五莲县 <span class="filter-count">890</span></a></li>
+                        <li><a href="#">山海天旅游度假区 <span class="filter-count">680</span></a></li>
+                    </ul>
+                </div>
+
+                <!-- 房屋类型 -->
+                <div class="sidebar-card">
+                    <h3 class="section-title" style="border:none; padding:0; font-size:16px; margin-bottom:15px;">房屋类型</h3>
+                    <ul class="filter-list">
+                        <li><a href="#">两室一厅 <span class="filter-count">5,200</span></a></li>
+                        <li><a href="#">三室一厅/两厅 <span class="filter-count">4,100</span></a></li>
+                        <li><a href="#">一室一厅 <span class="filter-count">2,800</span></a></li>
+                        <li><a href="#">四室及以上 <span class="filter-count">980</span></a></li>
+                        <li><a href="#">别墅/排屋 <span class="filter-count">200</span></a></li>
+                    </ul>
+                </div>
+
+                <!-- 最新公告 -->
+                <div class="sidebar-card">
+                    <h3 class="section-title" style="border:none; padding:0; font-size:16px; margin-bottom:15px;">最新动态</h3>
+                    <ul class="notice-list">
+                        <li>
+                            <span class="notice-icon">●</span>
+                            <a href="#">日照二手房市场分析报告</a>
+                        </li>
+                        <li>
+                            <span class="notice-icon">●</span>
+                            <a href="#">2024年日照学区划分调整通知</a>
+                        </li>
+                        <li>
+                            <span class="notice-icon">●</span>
+                            <a href="#">日照二手房交易税费指南</a>
+                        </li>
+                        <li>
+                            <span class="notice-icon">●</span>
+                            <a href="#">日照公积金贷款最新政策解读</a>
+                        </li>
+                    </ul>
+                </div>
+            </aside>
+        </div>
+
+        <!-- 买房指南 -->
+        <section class="guide-section">
+            <div class="section-header">
+                <h2 class="section-title">日照二手房交易指南</h2>
+            </div>
+            <div class="guide-grid">
+                <div class="guide-item">
+                    <div class="guide-icon">
+                        <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
+                    </div>
+                    <h4>房源核实</h4>
+                    <p>通过房产证、身份证双重核实房源真实性，谨防虚假信息。</p>
+                </div>
+                <div class="guide-item">
+                    <div class="guide-icon">
+                        <svg viewBox="0 0 24 24"><path d="M12 1L3 5v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V5l-9-4zm0 10.99h7c-.53 4.12-3.28 7.79-7 8.94V12H5V6.3l7-3.11v8.8z"/></svg>
+                    </div>
+                    <h4>资金监管</h4>
+                    <p>建议通过正规平台进行资金托管，保障买卖双方资金安全。</p>
+                </div>
+                <div class="guide-item">
+                    <div class="guide-icon">
+                        <svg viewBox="0 0 24 24"><path d="M11.8 10.9c-2.27-.59-3-1.2-3-2.15 0-1.09 1.01-1.85 2.7-1.85 1.78 0 2.44.85 2.5 2.1h2.21c-.07-1.72-1.12-3.3-3.21-3.81V3h-3v2.16c-1.94.42-3.5 1.68-3.5 3.61 0 2.31 1.91 3.46 4.7 4.13 2.5.6 3 1.48 3 2.41 0 .69-.49 1.79-2.7 1.79-2.06 0-2.87-.92-2.98-2.1h-2.2c.12 2.19 1.76 3.42 3.68 3.83V21h3v-2.15c1.95-.37 3.5-1.5 3.5-3.55 0-2.84-2.43-3.81-4.7-4.4z"/></svg>
+                    </div>
+                    <h4>税费计算</h4>
+                    <p>了解满五唯一、普通住宅与豪宅的税费差异，做好预算。</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- 页脚 -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>关于我们</h4>
+                    <ul>
+                        <li><a href="#">日照个人二手房网简介</a></li>
+                        <li><a href="#">平台优势</a></li>
+                        <li><a href="#">联系方式</a></li>
+                        <li><a href="#">加入我们</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>房源分类</h4>
+                    <ul>
+                        <li><a href="#">东港区二手房</a></li>
+                        <li><a href="#">开发区二手房</a></li>
+                        <li><a href="#">岚山区二手房</a></li>
+                        <li><a href="#">日照租房</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>服务支持</h4>
+                    <ul>
+                        <li><a href="#">发布房源</a></li>
+                        <li><a href="#">发布求购</a></li>
+                        <li><a href="#">购房指南</a></li>
+                        <li><a href="#">帮助中心</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>联系方式</h4>
+                    <ul>
+                        <li>电话：0633-1234567</li>
+                        <li>邮箱：contact@rizhao-fang.com</li>
+                        <li>地址：山东省日照市东港区</li>
+                        <li>工作时间：周一至周日 9:00-21:00</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 日照个人二手房网 版权所有 | 专注日照本地房产信息服务</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+  </html>
