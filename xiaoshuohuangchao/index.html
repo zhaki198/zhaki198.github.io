@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>小说皇朝秘史-历史架空与朝代传奇阅读平台</title>
+    <meta name="description" content="小说皇朝秘史收录海量历史架空、宫廷权谋与朝代传奇类小说，提供沉浸式阅读体验。涵盖乱世争霸、帝王心术、金戈铁马等经典题材，是历史小说爱好者的首选阅读社区。">
+    <meta name="keywords" content="小说皇朝秘史,历史小说,架空历史,宫廷权谋,朝代传奇,小说推荐">
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #8B0000; /* 深红，象征皇权与历史 */
+            --secondary-color: #D4AF37; /* 金色，象征荣耀 */
+            --bg-color: #F9F7F2; /* 米色，仿古纸张 */
+            --text-main: #2C2C2C;
+            --text-light: #666;
+            --card-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            --border-radius: 8px;
+            --container-width: 1200px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: "PingFang SC", "Microsoft YaHei", "Songti SC", serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* 布局容器 */
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* 顶部导航 */
+        header {
+            background-color: #fff;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo span {
+            color: var(--secondary-color);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            font-size: 16px;
+            font-weight: 500;
+            color: var(--text-main);
+        }
+
+        .nav-links a:hover, .nav-links a.active {
+            color: var(--primary-color);
+        }
+
+        .search-box {
+            display: flex;
+            align-items: center;
+            background: #f0f0f0;
+            padding: 5px 15px;
+            border-radius: 20px;
+        }
+
+        .search-box input {
+            border: none;
+            background: transparent;
+            outline: none;
+            font-size: 14px;
+            width: 150px;
+        }
+
+        /* Hero 区域 */
+        .hero {
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://picsum.photos/seed/history/1600/600') no-repeat center center/cover;
+            height: 400px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #fff;
+            margin-bottom: 40px;
+        }
+
+        .hero-content h1 {
+            font-size: 48px;
+            margin-bottom: 15px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .hero-content p {
+            font-size: 18px;
+            margin-bottom: 25px;
+            opacity: 0.9;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 30px;
+            background-color: var(--primary-color);
+            color: #fff;
+            border-radius: 4px;
+            font-weight: bold;
+            border: 1px solid var(--primary-color);
+        }
+
+        .btn:hover {
+            background-color: #a00000;
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            border: 1px solid #fff;
+            margin-left: 10px;
+        }
+
+        .btn-outline:hover {
+            background-color: #fff;
+            color: #000;
+        }
+
+        /* 专题分类 */
+        .section-title {
+            font-size: 28px;
+            margin-bottom: 25px;
+            border-left: 5px solid var(--secondary-color);
+            padding-left: 15px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .section-title a {
+            font-size: 14px;
+            color: var(--text-light);
+        }
+
+        .section-title a:hover {
+            color: var(--primary-color);
+        }
+
+        .categories {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            margin-bottom: 50px;
+        }
+
+        .cat-card {
+            background: #fff;
+            padding: 20px;
+            text-align: center;
+            border-radius: var(--border-radius);
+            box-shadow: var(--card-shadow);
+            transition: transform 0.3s;
+            cursor: pointer;
+        }
+
+        .cat-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .cat-icon {
+            font-size: 32px;
+            margin-bottom: 10px;
+            color: var(--secondary-color);
+        }
+
+        .cat-card h3 {
+            font-size: 18px;
+            margin-bottom: 5px;
+        }
+
+        .cat-card p {
+            font-size: 12px;
+            color: var(--text-light);
+        }
+
+        /* 热门榜单 */
+        .ranking-section {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 40px;
+            margin-bottom: 60px;
+        }
+
+        .book-list {
+            background: #fff;
+            padding: 25px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--card-shadow);
+        }
+
+        .book-item {
+            display: flex;
+            padding: 15px 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        .book-item:last-child {
+            border-bottom: none;
+        }
+
+        .rank-num {
+            font-size: 24px;
+            font-weight: bold;
+            color: #ddd;
+            width: 30px;
+            margin-right: 20px;
+            text-align: center;
+            font-family: "Times New Roman", serif;
+        }
+
+        .rank-num.top-3 {
+            color: var(--secondary-color);
+        }
+
+        .book-cover {
+            width: 80px;
+            height: 110px;
+            object-fit: cover;
+            border-radius: 4px;
+            margin-right: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+        }
+
+        .book-info {
+            flex: 1;
+        }
+
+        .book-title {
+            font-size: 18px;
+            font-weight: bold;
+            margin-bottom: 8px;
+            color: var(--text-main);
+        }
+
+        .book-title:hover {
+            color: var(--primary-color);
+        }
+
+        .book-meta {
+            font-size: 12px;
+            color: #999;
+            margin-bottom: 5px;
+        }
+
+        .book-tags span {
+            background: #f0f0f0;
+            color: #666;
+            padding: 2px 6px;
+            border-radius: 2px;
+            font-size: 10px;
+            margin-right: 5px;
+        }
+
+        .book-stats {
+            text-align: right;
+            font-size: 12px;
+            color: var(--text-light);
+        }
+
+        .author {
+            color: var(--primary-color);
+            font-weight: 500;
+        }
+
+        /* 推荐侧边栏 */
+        .sidebar {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .sidebar-widget {
+            background: #fff;
+            padding: 20px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--card-shadow);
+        }
+
+        .widget-title {
+            font-size: 16px;
+            border-bottom: 1px solid #eee;
+            padding-bottom: 10px;
+            margin-bottom: 15px;
+            color: var(--primary-color);
+        }
+
+        .new-chapter-list li {
+            margin-bottom: 12px;
+            font-size: 14px;
+        }
+
+        .new-chapter-list a {
+            display: block;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .new-chapter-list a:hover {
+            color: var(--primary-color);
+        }
+
+        .new-chapter-list .chapter-name {
+            font-size: 12px;
+            color: #999;
+            display: block;
+        }
+
+        /* 阅读指南 */
+        .guide-section {
+            background-color: #fff;
+            padding: 40px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--card-shadow);
+            margin-bottom: 60px;
+        }
+
+        .guide-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+        }
+
+        .guide-item {
+            text-align: center;
+        }
+
+        .guide-icon {
+            width: 60px;
+            height: 60px;
+            background-color: rgba(139, 0, 0, 0.1);
+            color: var(--primary-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+            margin: 0 auto 15px;
+        }
+
+        .guide-item h4 {
+            margin-bottom: 10px;
+        }
+
+        .guide-item p {
+            font-size: 14px;
+            color: var(--text-light);
+        }
+
+        /* 页脚 */
+        footer {
+            background-color: #333;
+            color: #999;
+            padding: 50px 0 20px;
+            margin-top: 50px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 40px;
+            margin-bottom: 30px;
+        }
+
+        .footer-col h4 {
+            color: #fff;
+            margin-bottom: 20px;
+            font-size: 16px;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a:hover {
+            color: var(--secondary-color);
+        }
+
+        .copyright {
+            text-align: center;
+            border-top: 1px solid #444;
+            padding-top: 20px;
+            font-size: 13px;
+        }
+
+        /* 响应式设计 */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+
+            .hero-content h1 {
+                font-size: 32px;
+            }
+
+            .categories {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .ranking-section {
+                grid-template-columns: 1fr;
+            }
+
+            .guide-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-wrapper">
+            <a href="#" class="logo">小说皇朝秘史 <span>· 历史长河</span></a>
+            <nav class="nav-links">
+                <a href="#" class="active">首页</a>
+                <a href="#">架空历史</a>
+                <a href="#">宫廷权谋</a>
+                <a href="#">金戈铁马</a>
+                <a href="#">人物传记</a>
+                <a href="#">排行榜</a>
+            </nav>
+            <div class="search-box">
+                <input type="text" placeholder="搜索书名或作者...">
+                <span>🔍</span>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container hero-content">
+                <h1>重返皇朝，共赴秘史</h1>
+                <p>在历史的褶皱中寻找真相，在权谋的漩涡中见证传奇。</p>
+                <div>
+                    <a href="#" class="btn">开始阅读</a>
+                    <a href="#" class="btn btn-outline">投稿作品</a>
+                </div>
+            </div>
+        </section>
+
+        <div class="container">
+            <!-- 分类导航 -->
+            <section class="categories">
+                <div class="cat-card">
+                    <div class="cat-icon">👑</div>
+                    <h3>帝王将相</h3>
+                    <p>开国建业 / 帝王心术</p>
+                </div>
+                <div class="cat-card">
+                    <div class="cat-icon">⚔️</div>
+                    <h3>战争风云</h3>
+                    <p>金戈铁马 / 烽火连天</p>
+                </div>
+                <div class="cat-card">
+                    <div class="cat-icon">🏯</div>
+                    <h3>宫廷内斗</h3>
+                    <p>后宫争宠 / 朝堂博弈</p>
+                </div>
+                <div class="cat-card">
+                    <div class="cat-icon">📜</div>
+                    <h3>秘史档案</h3>
+                    <p>野史传说 / 悬疑解密</p>
+                </div>
+            </section>
+
+            <!-- 榜单与推荐 -->
+            <section class="ranking-section">
+                <!-- 左侧：热门榜单 -->
+                <div class="main-content">
+                    <div class="section-title">
+                        <span>🔥 月度热门榜单</span>
+                        <a href="#">查看更多 &gt;</a>
+                    </div>
+                    <div class="book-list">
+                        <article class="book-item">
+                            <div class="rank-num top-3">1</div>
+                            <img src="https://picsum.photos/seed/king1/80/110" alt="封面" class="book-cover">
+                            <div class="book-info">
+                                <h3 class="book-title"><a href="#">大秦：从边军小卒到千古一帝</a></h3>
+                                <div class="book-meta">作者：铁马冰河 | 分类：历史架空</div>
+                                <div class="book-tags">
+                                    <span>穿越</span><span>争霸</span><span>热血</span>
+                                </div>
+                            </div>
+                            <div class="book-stats">
+                                <div class="author">点击 128.5万</div>
+                                <div class="author">收藏 45.2万</div>
+                            </div>
+                        </article>
+
+                        <article class="book-item">
+                            <div class="rank-num top-3">2</div>
+                            <img src="https://picsum.photos/seed/king2/80/110" alt="封面" class="book-cover">
+                            <div class="book-info">
+                                <h3 class="book-title"><a href="#">大明锦衣卫：暗夜破局者</a></h3>
+                                <div class="book-meta">作者：夜雨听风 | 分类：悬疑历史</div>
+                                <div class="book-tags">
+                                    <span>锦衣卫</span><span>探案</span><span>权谋</span>
+                                </div>
+                            </div>
+                            <div class="book-stats">
+                                <div class="author">点击 98.2万</div>
+                                <div class="author">收藏 32.1万</div>
+                            </div>
+                        </article>
+
+                        <article class="book-item">
+                            <div class="rank-num top-3">3</div>
+                            <img src="https://picsum.photos/seed/king3/80/110" alt="封面" class="book-cover">
+                            <div class="book-info">
+                                <h3 class="book-title"><a href="#">大唐：我在长安卖胡饼</a></h3>
+                                <div class="book-meta">作者：长安旧梦 | 分类：历史种田</div>
+                                <div class="book-tags">
+                                    <span>种田</span><span>美食</span><span>轻松</span>
+                                </div>
+                            </div>
+                            <div class="book-stats">
+                                <div class="author">点击 85.6万</div>
+                                <div class="author">收藏 28.9万</div>
+                            </div>
+                        </article>
+
+                        <article class="book-item">
+                            <div class="rank-num">4</div>
+                            <img src="https://picsum.photos/seed/king4/80/110" alt="封面" class="book-cover">
+                            <div class="book-info">
+                                <h3 class="book-title"><a href="#">晚清风云录：最后的荣光</a></h3>
+                                <div class="book-meta">作者：历史观察员 | 分类：近代史</div>
+                                <div class="book-tags">
+                                    <span>战争</span><span>改革</span><span>沉重</span>
+                                </div>
+                            </div>
+                            <div class="book-stats">
+                                <div class="author">点击 76.3万</div>
+                                <div class="author">收藏 22.5万</div>
+                            </div>
+                        </article>
+                    </div>
+                </div>
+
+                <!-- 右侧：最新动态 -->
+                <aside class="sidebar">
+                    <div class="sidebar-widget">
+                        <h4 class="widget-title">📚 新书推荐</h4>
+                        <div class="new-chapter-list">
+                            <a href="#"><span class="chapter-name">玄幻 · 3小时前</span>第1章 破庙奇遇</a>
+                            <a href="#"><span class="chapter-name">历史 · 5小时前</span>第102章 暗度陈仓</a>
+                            <a href="#"><span class="chapter-name">都市 · 昨天</span>第88章 决战前夕</a>
+                            <a href="#"><span class="chapter-name">历史 · 昨天</span>第55章 风云变幻</a>
+                            <a href="#"><span class="chapter-name">科幻 · 2天前</span>第12章 星际迷航</a>
+                        </div>
+                    </div>
+
+                    <div class="sidebar-widget">
+                        <h4 class="widget-title">👑 皇朝榜单</h4>
+                        <div class="new-chapter-list">
+                            <a href="#">周榜TOP10</a>
+                            <a href="#">月榜TOP10</a>
+                            <a href="#">总榜TOP100</a>
+                            <a href="#">新书榜</a>
+                            <a href="#">收藏榜</a>
+                        </div>
+                    </div>
+                </aside>
+            </section>
+
+            <!-- 阅读指南 -->
+            <section class="guide-section">
+                <div class="section-title">
+                    <span>📖 如何开始您的历史之旅</span>
+                </div>
+                <div class="guide-grid">
+                    <div class="guide-item">
+                        <div class="guide-icon">🔍</div>
+                        <h4>精准检索</h4>
+                        <p>输入朝代、地名或关键词，快速定位您感兴趣的皇朝秘史篇章。</p>
+                    </div>
+                    <div class="guide-item">
+                        <div class="guide-icon">⭐</div>
+                        <h4>收藏追踪</h4>
+                        <p>一键收藏心仪作品，不错过任何一次更新，随时回顾精彩章节。</p>
+                    </div>
+                    <div class="guide-item">
+                        <div class="guide-icon">💬</div>
+                        <h4>互动评论</h4>
+                        <p>加入书评区，与万千书友探讨历史走向，分享您的阅读感悟。</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h4>关于小说皇朝秘史</h4>
+                    <p style="font-size: 13px; line-height: 1.8;">专注于提供高质量的历史架空与朝代传奇小说阅读体验。我们致力于挖掘被遗忘的历史细节，用文字重现那个金戈铁马、风云变幻的皇朝时代。</p>
+                </div>
+                <div class="footer-col">
+                    <h4>热门分类</h4>
+                    <ul>
+                        <li><a href="#">架空历史</a></li>
+                        <li><a href="#">三国演义</a></li>
+                        <li><a href="#">大明王朝</a></li>
+                        <li><a href="#">清朝秘史</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>服务支持</h4>
+                    <ul>
+                        <li><a href="#">投稿指南</a></li>
+                        <li><a href="#">版权声明</a></li>
+                        <li><a href="#">读者反馈</a></li>
+                        <li><a href="#">帮助中心</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>关注我们</h4>
+                    <ul>
+                        <li><a href="#">微信公众号</a></li>
+                        <li><a href="#">新浪微博</a></li>
+                        <li><a href="#">QQ读书圈</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 小说皇朝秘史 版权所有 | 本站所有小说内容均来自互联网，仅供学习交流使用</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+                                              </html>
