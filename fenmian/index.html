@@ -1,0 +1,725 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="分娩指南提供专业的分娩准备、产前检查、分娩方式选择及产后恢复建议。帮助准父母了解分娩全过程，缓解分娩焦虑，为迎接新生命做好充分准备。">
+    <meta name="keywords" content="分娩,分娩准备,产前检查,分娩方式,顺产,剖腹产,产后恢复">
+    <title>分娩指南-科学分娩准备与产房全流程解析</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #e91e63;
+            --primary-light: #fce4ec;
+            --secondary-color: #2c3e50;
+            --text-color: #333;
+            --text-light: #666;
+            --bg-color: #f9f9f9;
+            --white: #ffffff;
+            --border-radius: 12px;
+            --shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+            --container-width: 1200px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+            line-height: 1.7;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s ease;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Layout */
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background: var(--white);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo svg {
+            width: 32px;
+            height: 32px;
+            fill: currentColor;
+        }
+
+        nav ul {
+            display: flex;
+            gap: 30px;
+        }
+
+        nav a {
+            font-weight: 500;
+            color: var(--secondary-color);
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--primary-color);
+        }
+
+        .cta-button {
+            background-color: var(--primary-color);
+            color: var(--white);
+            padding: 10px 24px;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: transform 0.2s, background-color 0.2s;
+        }
+
+        .cta-button:hover {
+            background-color: #d81b60;
+            transform: translateY(-2px);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--primary-light) 0%, #fff0f5 100%);
+            padding: 80px 0;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            color: var(--secondary-color);
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            color: var(--text-light);
+            max-width: 700px;
+            margin: 0 auto 40px;
+        }
+
+        /* Stats Bar */
+        .stats-bar {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 20px;
+            background: var(--white);
+            padding: 30px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow);
+            margin-top: -50px;
+            position: relative;
+            z-index: 10;
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-number {
+            display: block;
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--primary-color);
+        }
+
+        .stat-label {
+            font-size: 0.9rem;
+            color: var(--text-light);
+        }
+
+        /* Main Content */
+        .main-content {
+            padding: 60px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-title h2 {
+            font-size: 2rem;
+            color: var(--secondary-color);
+            margin-bottom: 10px;
+        }
+
+        .section-title p {
+            color: var(--text-light);
+        }
+
+        /* Grid Layouts */
+        .grid-3 {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+
+        .grid-2 {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 40px;
+            align-items: center;
+        }
+
+        /* Cards */
+        .card {
+            background: var(--white);
+            border-radius: var(--border-radius);
+            padding: 30px;
+            box-shadow: var(--shadow);
+            transition: transform 0.3s ease;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card-icon {
+            width: 60px;
+            height: 60px;
+            background: var(--primary-light);
+            color: var(--primary-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+        }
+
+        .card-icon svg {
+            width: 30px;
+            height: 30px;
+            fill: currentColor;
+        }
+
+        .card h3 {
+            font-size: 1.4rem;
+            margin-bottom: 15px;
+            color: var(--secondary-color);
+        }
+
+        .card p {
+            color: var(--text-light);
+            margin-bottom: 20px;
+            flex-grow: 1;
+        }
+
+        .card-link {
+            color: var(--primary-color);
+            font-weight: 600;
+            display: inline-flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        /* Feature Image Box */
+        .feature-box {
+            position: relative;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+        }
+
+        .feature-box img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .feature-content {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+            padding: 30px;
+            color: var(--white);
+        }
+
+        .feature-content h3 {
+            margin-bottom: 10px;
+            font-size: 1.5rem;
+        }
+
+        /* Timeline Section */
+        .timeline {
+            position: relative;
+            padding: 40px 0;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: #e0e0e0;
+            transform: translateX(-50%);
+        }
+
+        .timeline-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 40px;
+            position: relative;
+        }
+
+        .timeline-item:nth-child(even) {
+            flex-direction: row-reverse;
+        }
+
+        .timeline-content {
+            width: 45%;
+            background: var(--white);
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+
+        .timeline-dot {
+            width: 20px;
+            height: 20px;
+            background: var(--primary-color);
+            border-radius: 50%;
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            border: 4px solid var(--white);
+            z-index: 2;
+        }
+
+        .timeline-date {
+            font-weight: 700;
+            color: var(--primary-color);
+            margin-bottom: 5px;
+            display: block;
+        }
+
+        /* FAQ Section */
+        .faq-section {
+            background: var(--white);
+            padding: 60px 0;
+            margin-top: 60px;
+        }
+
+        .faq-item {
+            border-bottom: 1px solid #eee;
+            padding: 20px 0;
+        }
+
+        .faq-question {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: var(--secondary-color);
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .faq-answer {
+            margin-top: 15px;
+            color: var(--text-light);
+            display: none;
+        }
+
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+
+        .faq-item.active .faq-question svg {
+            transform: rotate(180deg);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--secondary-color);
+            color: #bdc3c7;
+            padding: 60px 0 20px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h4 {
+            color: var(--white);
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a:hover {
+            color: var(--white);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 20px;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 992px) {
+            .grid-3 {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .timeline::before {
+                left: 20px;
+            }
+            .timeline-item, .timeline-item:nth-child(even) {
+                flex-direction: column;
+                padding-left: 50px;
+            }
+            .timeline-content {
+                width: 100%;
+            }
+            .timeline-dot {
+                left: 20px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-wrapper {
+                flex-direction: column;
+                height: auto;
+                padding: 15px 0;
+            }
+            nav ul {
+                margin: 15px 0;
+                gap: 15px;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+            .hero h1 {
+                font-size: 2rem;
+            }
+            .stats-bar {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            .grid-3, .grid-2, .footer-grid {
+                grid-template-columns: 1fr;
+            }
+            .cta-button {
+                width: 100%;
+                text-align: center;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container nav-wrapper">
+            <a href="#" class="logo">
+                <svg viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+                分娩指南
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="#prepare" class="active">分娩准备</a></li>
+                    <li><a href="#process">分娩过程</a></li>
+                    <li><a href="#mode">分娩方式</a></li>
+                    <li><a href="#recovery">产后恢复</a></li>
+                </ul>
+            </nav>
+            <a href="#contact" class="cta-button">咨询医生</a>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h1>迎接新生命的科学指南</h1>
+            <p>从产前准备到分娩过程，再到产后恢复，我们提供全面的分娩知识，帮助准父母减轻焦虑，安全迎接宝宝。</p>
+            <a href="#prepare" class="cta-button" style="padding: 15px 40px; font-size: 1.1rem;">开始准备</a>
+        </div>
+    </section>
+
+    <div class="container">
+        <div class="stats-bar">
+            <div class="stat-item">
+                <span class="stat-number">40</span>
+                <span class="stat-label">周孕期</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number">3</span>
+                <span class="stat-label">个产程</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number">2</span>
+                <span class="stat-label">种主要方式</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number">100%</span>
+                <span class="stat-label">关注安全</span>
+            </div>
+        </div>
+    </div>
+
+    <main class="main-content">
+        <section id="prepare" class="container">
+            <div class="section-title">
+                <h2>分娩准备全攻略</h2>
+                <p>充分的准备是顺利分娩的第一步，从心理建设到物品清单，全方位为您护航。</p>
+            </div>
+            <div class="grid-3">
+                <article class="card">
+                    <div class="card-icon">
+                        <svg viewBox="0 0 24 24"><path d="M19 3h-1V1h-2v2H8V1H6v2H5c-1.11 0-1.99.9-1.99 2L3 19c0 1.1.89 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm0 16H5V8h14v11zM7 10h5v5H7z"/></svg>
+                    </div>
+                    <h3>产前检查清单</h3>
+                    <p>定期产检是监测胎儿发育和母体健康的关键。了解从孕早期到孕晚期的各项必查项目，包括NT检查、大排畸、糖耐量测试等，确保母婴安全。</p>
+                    <a href="#" class="card-link">查看详细检查表 &rarr;</a>
+                </article>
+                <article class="card">
+                    <div class="card-icon">
+                        <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-6h2v6zm0-8h-2V7h2v2z"/></svg>
+                    </div>
+                    <h3>心理建设与呼吸法</h3>
+                    <p>分娩焦虑是常见问题。通过学习拉玛泽呼吸法、自由体位分娩等技巧，可以有效缓解产痛，增强分娩信心。同时，准父母的心理准备同样重要。</p>
+                    <a href="#" class="card-link">学习呼吸技巧 &rarr;</a>
+                </article>
+                <article class="card">
+                    <div class="card-icon">
+                        <svg viewBox="0 0 24 24"><path d="M20 6h-4V4c0-1.11-.89-2-2-2h-4c-1.11 0-2 .89-2 2v2H4c-1.11 0-1.99.89-1.99 2L2 19c0 1.11.89 2 2 2h16c1.11 0 2-.89 2-2V8c0-1.11-.89-2-2-2zm-6 0h-4V4h4v2z"/></svg>
+                    </div>
+                    <h3>待产包准备</h3>
+                    <p>什么物品必须带？什么可以简化？为您整理了一份科学的待产包清单，涵盖产妇用品、新生儿用品及证件文件，避免遗漏关键物品。</p>
+                    <a href="#" class="card-link">下载待产包清单 &rarr;</a>
+                </article>
+            </div>
+        </section>
+
+        <section id="process" class="container">
+            <div class="section-title">
+                <h2>分娩全过程解析</h2>
+                <p>了解产程的三个阶段，有助于准妈妈在分娩时更好地配合医生，节省体力。</p>
+            </div>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">第一产程：宫口扩张期</span>
+                        <h3>潜伏期与活跃期</h3>
+                        <p>这是分娩最长的阶段。从规律宫缩到宫口开全，通常需要数小时甚至数天。此阶段重点是休息、补充能量（如红糖水、巧克力）和监测宫缩频率。</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">第二产程：胎儿娩出期</span>
+                        <h3>屏气用力与分娩</h3>
+                        <p>当宫口开全（约10厘米）后，进入第二产程。在医生指导下，通过正确的用力方式（深吸气、憋气、向下用力）配合宫缩，将胎儿娩出。此过程通常持续1-2小时。</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <span class="timeline-date">第三产程：胎盘娩出期</span>
+                        <h3>胎盘分离与缝合</h3>
+                        <p>胎儿娩出后，通常会有轻微的疼痛感，此时医生会协助胎盘娩出。随后会对产道进行清理和缝合，整个过程通常只需几分钟到十几分钟。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="mode" class="container">
+            <div class="section-title">
+                <h2>选择分娩方式</h2>
+                <p>顺产还是剖腹产？根据母婴健康状况，医生会给出最专业的建议。</p>
+            </div>
+            <div class="grid-2">
+                <div class="feature-box">
+                    <img src="https://picsum.photos/seed/mother/600/400" alt="顺产过程示意">
+                    <div class="feature-content">
+                        <h3>顺产</h3>
+                        <p>自然分娩对母婴健康最有利。产后恢复快，并发症少，且有利于新生儿早期接触母亲。适合骨盆条件正常、胎位正常且无并发症的孕妇。</p>
+                    </div>
+                </div>
+                <div class="feature-box">
+                    <img src="https://picsum.photos/seed/doctor/600/400" alt="剖腹产示意">
+                    <div class="feature-content">
+                        <h3>剖腹产</h3>
+                        <p>通过腹部手术将胎儿取出。适用于胎位异常（如臀位）、骨盆狭窄、产道梗阻或胎儿窘迫等情况。手术切口通常位于下腹部，恢复期相对较长。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="recovery" class="container">
+            <div class="section-title">
+                <h2>产后恢复要点</h2>
+                <p>分娩并非终点，产后恢复同样重要。关注身体变化，科学护理。</p>
+            </div>
+            <div class="grid-3">
+                <article class="card">
+                    <div class="card-icon">
+                        <svg viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+                    </div>
+                    <h3>产后饮食</h3>
+                    <p>产后应遵循“少食多餐、营养均衡”的原则。初期以流质或半流质食物为主，逐步过渡到正常饮食，注意补充蛋白质、铁质和水分。</p>
+                </article>
+                <article class="card">
+                    <div class="card-icon">
+                        <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+                    </div>
+                    <h3>恶露观察</h3>
+                    <p>产后阴道排出的分泌物称为恶露。正常恶露有血腥味但不臭。若恶露量过多、颜色异常或有臭味，可能是感染迹象，需及时就医。</p>
+                </article>
+                <article class="card">
+                    <div class="card-icon">
+                        <svg viewBox="0 0 24 24"><path d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z"/></svg>
+                    </div>
+                    <h3>盆底肌修复</h3>
+                    <p>分娩可能导致盆底肌受损。产后42天检查后，建议根据医生建议进行盆底肌康复训练，预防漏尿、子宫脱垂等产后问题。</p>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <section class="faq-section">
+        <div class="container">
+            <div class="section-title">
+                <h2>常见问题解答</h2>
+            </div>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <div class="faq-question">分娩前有什么预兆吗？<span>+</span></div>
+                    <div class="faq-answer">常见的分娩预兆包括：假性宫缩、见红、破水以及真正的规律性宫缩。当宫缩变得有规律且疼痛加剧时，通常意味着分娩即将开始。</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">什么情况下必须选择剖腹产？<span>+</span></div>
+                    <div class="faq-answer">如果胎儿胎位不正（如臀位）、骨盆狭窄、产道阻塞、胎儿过大、胎儿窘迫、前次剖腹产史等情况，医生通常会建议选择剖腹产以确保安全。</div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">分娩时可以吃东西吗？<span>+</span></div>
+                    <div class="faq-answer">在第一产程活跃期之前，可以适量进食易消化的食物和补充水分。但在进入第二产程（胎儿娩出期）或准备进行无痛分娩时，通常需要禁食禁水，以防麻醉意外。</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="contact">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>关于分娩指南</h4>
+                    <p style="font-size: 0.9rem; line-height: 1.6;">我们致力于为新手父母提供最科学、最全面的分娩知识，帮助您度过人生中最重要的时刻。</p>
+                </div>
+                <div class="footer-col">
+                    <h4>快速导航</h4>
+                    <ul>
+                        <li><a href="#prepare">分娩准备</a></li>
+                        <li><a href="#process">分娩过程</a></li>
+                        <li><a href="#mode">分娩方式</a></li>
+                        <li><a href="#recovery">产后恢复</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>相关资源</h4>
+                    <ul>
+                        <li><a href="#">孕期营养计算器</a></li>
+                        <li><a href="#">预产期查询</a></li>
+                        <li><a href="#">待产包推荐</a></li>
+                        <li><a href="#">医院排名</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>联系我们</h4>
+                    <ul>
+                        <li>电话：400-123-4567</li>
+                        <li>邮箱：support@birthguide.com</li>
+                        <li>地址：健康大道88号</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 分娩指南 版权所有 | 仅供参考，不作为医疗诊断依据</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // FAQ Accordion Logic
+        document.addEventListener('DOMContentLoaded', function() {
+            const faqItems = document.querySelectorAll('.faq-item');
+            
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                question.addEventListener('click', () => {
+                    // Close other items
+                    faqItems.forEach(otherItem => {
+                        if (otherItem !== item) {
+                            otherItem.classList.remove('active');
+                        }
+                    });
+                    // Toggle current item
+                    item.classList.toggle('active');
+                });
+            });
+
+            // Smooth Scroll for Anchor Links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const target = document.querySelector(this.getAttribute('href'));
+                    if (target) {
+                        target.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+  </html>
