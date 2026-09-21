@@ -1,0 +1,700 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="警花皇后 - 深度解析警界女性精英的成长历程、职业风采与幕后故事，探讨女性在执法岗位上的挑战与成就。">
+    <meta name="keywords" content="警花皇后, 警界女性, 女警风采, 职场励志, 案件侦破">
+    <title>警花皇后-警界女性精英风采与成长纪实</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #1a3c5e;
+            --accent-color: #c8102e;
+            --gold-color: #d4af37;
+            --bg-light: #f4f7f6;
+            --text-dark: #333333;
+            --text-gray: #666666;
+            --white: #ffffff;
+            --spacing-unit: 1rem;
+            --container-width: 1200px;
+            --card-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "PingFang SC", "Microsoft YaHei", "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: var(--bg-light);
+            overflow-x: hidden;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: var(--transition);
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Layout Utilities */
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+        }
+
+        .section {
+            padding: 4rem 0;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 3rem;
+        }
+
+        .section-title {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-title::after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 3px;
+            background-color: var(--accent-color);
+            margin: 0.5rem auto 0;
+        }
+
+        .section-subtitle {
+            color: var(--text-gray);
+            font-size: 1rem;
+        }
+
+        /* Header & Nav */
+        header {
+            background-color: var(--white);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .logo span {
+            color: var(--accent-color);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+        }
+
+        .nav-links a {
+            font-weight: 500;
+            color: var(--text-dark);
+            font-size: 1rem;
+        }
+
+        .nav-links a:hover, .nav-links a.active {
+            color: var(--accent-color);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--primary-color) 0%, #2c5282 100%);
+            color: var(--white);
+            padding: 6rem 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-image: url('data:image/svg+xml;utf8,<svg width="60" height="60" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg"><g fill="none" fill-rule="evenodd"><g fill="%23ffffff" fill-opacity="0.05"><path d="M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z"/></g></g></svg>');
+            opacity: 0.3;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1.5rem;
+            font-weight: 800;
+            letter-spacing: 1px;
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            opacity: 0.9;
+            margin-bottom: 2.5rem;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 0.8rem 2rem;
+            border-radius: 4px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .btn-primary {
+            background-color: var(--accent-color);
+            color: var(--white);
+            border: 2px solid var(--accent-color);
+        }
+
+        .btn-primary:hover {
+            background-color: transparent;
+            color: var(--white);
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            color: var(--white);
+            border: 2px solid var(--white);
+            margin-left: 1rem;
+        }
+
+        .btn-outline:hover {
+            background-color: var(--white);
+            color: var(--primary-color);
+        }
+
+        /* Stats Section */
+        .stats-bar {
+            background-color: var(--white);
+            padding: 2rem 0;
+            margin-top: -3rem;
+            position: relative;
+            z-index: 2;
+            box-shadow: var(--card-shadow);
+            border-radius: 8px;
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+
+        .stat-item {
+            text-align: center;
+            padding: 1rem;
+            flex: 1;
+            min-width: 200px;
+        }
+
+        .stat-number {
+            display: block;
+            font-size: 2rem;
+            font-weight: bold;
+            color: var(--primary-color);
+        }
+
+        .stat-label {
+            color: var(--text-gray);
+            font-size: 0.9rem;
+        }
+
+        /* Feature Grid */
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .feature-card {
+            background: var(--white);
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: var(--card-shadow);
+            transition: var(--transition);
+            border-top: 4px solid transparent;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            border-top-color: var(--gold-color);
+        }
+
+        .feature-icon {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+        }
+
+        .feature-card h3 {
+            margin-bottom: 1rem;
+            color: var(--text-dark);
+        }
+
+        .feature-card p {
+            color: var(--text-gray);
+            font-size: 0.95rem;
+        }
+
+        /* Content List / Articles */
+        .content-list {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .article-item {
+            background: var(--white);
+            display: flex;
+            flex-direction: column;
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: var(--card-shadow);
+            transition: var(--transition);
+        }
+
+        .article-item:hover {
+            box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+        }
+
+        .article-meta {
+            font-size: 0.85rem;
+            color: var(--text-gray);
+            margin-bottom: 0.5rem;
+            display: flex;
+            gap: 1rem;
+        }
+
+        .article-tag {
+            background-color: rgba(200, 16, 46, 0.1);
+            color: var(--accent-color);
+            padding: 0.2rem 0.6rem;
+            border-radius: 4px;
+            font-weight: 500;
+        }
+
+        .article-title {
+            font-size: 1.4rem;
+            margin-bottom: 0.8rem;
+            color: var(--primary-color);
+        }
+
+        .article-excerpt {
+            color: var(--text-gray);
+            margin-bottom: 1rem;
+        }
+
+        .read-more {
+            color: var(--primary-color);
+            font-weight: 600;
+            align-self: flex-start;
+            display: flex;
+            align-items: center;
+            gap: 0.3rem;
+        }
+
+        .read-more:hover {
+            color: var(--accent-color);
+        }
+
+        /* Quote Section */
+        .quote-section {
+            background-color: var(--primary-color);
+            color: var(--white);
+            text-align: center;
+            padding: 5rem 0;
+        }
+
+        .quote-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .quote-text {
+            font-size: 1.5rem;
+            font-style: italic;
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+        }
+
+        .quote-author {
+            font-size: 1rem;
+            opacity: 0.8;
+        }
+
+        /* FAQ Section */
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background: var(--white);
+            margin-bottom: 1rem;
+            border-radius: 6px;
+            box-shadow: var(--card-shadow);
+            overflow: hidden;
+        }
+
+        .faq-question {
+            padding: 1.2rem 1.5rem;
+            font-weight: 600;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: var(--white);
+            transition: background-color 0.2s;
+        }
+
+        .faq-question:hover {
+            background-color: #f9f9f9;
+        }
+
+        .faq-question::after {
+            content: '+';
+            font-size: 1.5rem;
+            color: var(--primary-color);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            padding: 0 1.5rem;
+            transition: max-height 0.3s ease, padding 0.3s ease;
+            background-color: #fafafa;
+            color: var(--text-gray);
+        }
+
+        .faq-answer p {
+            padding-bottom: 1.5rem;
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 200px;
+            padding-bottom: 1.5rem;
+        }
+
+        .faq-item.active .faq-question::after {
+            content: '-';
+        }
+
+        /* Footer */
+        footer {
+            background-color: #111;
+            color: #ccc;
+            padding: 4rem 0 2rem;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 3rem;
+            margin-bottom: 3rem;
+        }
+
+        .footer-col h4 {
+            color: var(--white);
+            margin-bottom: 1.5rem;
+            font-size: 1.1rem;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 0.8rem;
+        }
+
+        .footer-col ul li a:hover {
+            color: var(--white);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 2rem;
+            border-top: 1px solid #333;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .nav-links {
+                display: none; /* Simplified for mobile */
+            }
+
+            .stats-bar {
+                flex-direction: column;
+                gap: 2rem;
+            }
+
+            .article-item {
+                padding: 1.5rem;
+            }
+            
+            .article-title {
+                font-size: 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="container nav-container">
+            <a href="#" class="logo">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color:var(--accent-color)"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                警花<span>皇后</span>
+            </a>
+            <nav class="nav-links">
+                <a href="#" class="active">首页</a>
+                <a href="#features">职业风采</a>
+                <a href="#stories">典型案例</a>
+                <a href="#community">互动社区</a>
+                <a href="#about">关于我们</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container hero-content">
+            <h1>警花皇后：女性执法者的荣耀与担当</h1>
+            <p>探索警界精英女性的成长轨迹，见证她们如何在维护正义的道路上，以智慧、勇气和坚韧书写属于自己的传奇篇章。</p>
+            <div class="hero-buttons">
+                <a href="#stories" class="btn btn-primary">阅读案例</a>
+                <a href="#features" class="btn btn-outline">了解职业</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <div class="container">
+        <div class="stats-bar">
+            <div class="stat-item">
+                <span class="stat-number">98%</span>
+                <span class="stat-label">破案率贡献</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number">500+</span>
+                <span class="stat-label">精英案例</span>
+            </div>
+            <div class="stat-item">
+                <span class="stat-number">24/7</span>
+                <span class="stat-label">全天候服务</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Features Section -->
+    <section id="features" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">职业风采</h2>
+                <p class="section-subtitle">打破刻板印象，展现新时代女性民警的多元魅力</p>
+            </div>
+            <div class="feature-grid">
+                <article class="feature-card">
+                    <div class="feature-icon">⚖️</div>
+                    <h3>刑侦精英</h3>
+                    <p>深入一线，运用科学侦查手段，在错综复杂的案件中抽丝剥茧，锁定真相。</p>
+                </article>
+                <article class="feature-card">
+                    <div class="feature-icon">👮</div>
+                    <h3>社区守护者</h3>
+                    <p>扎根基层，化解邻里纠纷，用耐心与爱心维护社区和谐稳定。</p>
+                </article>
+                <article class="feature-card">
+                    <div class="feature-icon">🚓</div>
+                    <h3>交通指挥</h3>
+                    <p>烈日下的坚守，确保城市道路畅通无阻，守护每一位出行者的平安。</p>
+                </article>
+                <article class="feature-card">
+                    <div class="feature-icon">💻</div>
+                    <h3>技术侦查</h3>
+                    <p>依托大数据与网络技术，在看不见的战场上与犯罪分子进行数字博弈。</p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Quote Section -->
+    <section class="quote-section">
+        <div class="container quote-content">
+            <p class="quote-text">“制服不仅是职责的象征，更是责任的重量。作为警花皇后，我们用行动证明：温柔与坚韧可以并存，柔肩也能担起正义的重任。”</p>
+            <p class="quote-author">—— 警界杰出代表访谈</p>
+        </div>
+    </section>
+
+    <!-- Featured Stories Section -->
+    <section id="stories" class="section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">典型案例</h2>
+                <p class="section-subtitle">记录那些令人动容的破案故事与幕后花絮</p>
+            </div>
+            <div class="content-list">
+                <article class="article-item">
+                    <div class="article-meta">
+                        <span class="article-tag">刑侦破案</span>
+                        <span>2023年10月24日</span>
+                    </div>
+                    <h3 class="article-title">迷雾追踪：女警队长如何破获跨国诈骗案</h3>
+                    <p class="article-excerpt">面对跨国诈骗团伙的严密伪装，刑侦支队女队长带领团队历时三个月，跨越三个国家，最终将幕后黑手绳之以法，追回群众损失数百万...</p>
+                    <a href="#" class="read-more">阅读全文 &rarr;</a>
+                </article>
+                <article class="article-item">
+                    <div class="article-meta">
+                        <span class="article-tag">社区警务</span>
+                        <span>2023年10月18日</span>
+                    </div>
+                    <h3 class="article-title">小巷里的守护神：社区民警李警官的一天</h3>
+                    <p class="article-excerpt">凌晨两点的调解现场，烈日下的反诈宣传，李警官用脚步丈量着辖区的每一寸土地，她是居民心中最可信赖的“贴心人”。</p>
+                    <a href="#" class="read-more">阅读全文 &rarr;</a>
+                </article>
+                <article class="article-item">
+                    <div class="article-meta">
+                        <span class="article-tag">警务技术</span>
+                        <span>2023年10月10日</span>
+                    </div>
+                    <h3 class="article-title">从数据海洋中打捞真相：大数据侦查实录</h3>
+                    <p class="article-excerpt">没有硝烟的战场，技术科的女民警们通过海量数据分析，精准识别犯罪轨迹，展现了新时代警务工作的科技力量。</p>
+                    <a href="#" class="read-more">阅读全文 &rarr;</a>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="section" style="background-color: #f9f9f9;">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">常见问题</h2>
+                <p class="section-subtitle">关于警界女性职业发展与社会认知的解答</p>
+            </div>
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question">女性在警队中面临的主要挑战是什么？</div>
+                    <div class="faq-answer">
+                        <p>女性在警队中常面临体能要求高、工作环境复杂以及刻板印象的挑战。但通过科学的训练、心理建设以及团队协作，女性民警在侦查、审讯、社区服务等领域展现出独特的优势，是警队中不可或缺的力量。</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">如何成为一名优秀的警花？</div>
+                    <div class="faq-answer">
+                        <p>首先需要具备扎实的法律知识和过硬的业务技能；其次，要培养良好的心理素质和抗压能力；最后，保持正直的品格和对正义的执着追求是成为一名优秀警务人员（无论是男是女）的根本。</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">社会对警花有哪些常见的误解？</div>
+                    <div class="faq-answer">
+                        <p>常见误解包括认为女性只能从事文职工作，或者认为警花仅仅是“花瓶”。实际上，大量女性民警在一线刑侦、特警、交通管理等高强度岗位工作，她们同样需要具备甚至超越男性的专业素养和勇气。</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <a href="#" class="logo" style="margin-bottom: 1rem; display:inline-block;">
+                        警花<span>皇后</span>
+                    </a>
+                    <p style="font-size: 0.9rem; line-height: 1.6;">致力于推广警界女性正能量，记录职业风采，分享成长故事，增强公众对公安工作的理解与支持。</p>
+                </div>
+                <div class="footer-col">
+                    <h4>快速导航</h4>
+                    <ul>
+                        <li><a href="#">首页</a></li>
+                        <li><a href="#features">职业介绍</a></li>
+                        <li><a href="#stories">案例故事</a></li>
+                        <li><a href="#community">互动交流</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>相关链接</h4>
+                    <ul>
+                        <li><a href="#">国家公安部官网</a></li>
+                        <li><a href="#">警队招募指南</a></li>
+                        <li><a href="#">安全防范知识</a></li>
+                        <li><a href="#">举报违法线索</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>联系我们</h4>
+                    <ul>
+                        <li>邮箱：contact@jinghuahuang.com</li>
+                        <li>电话：010-12345678</li>
+                        <li>地址：中国某市公安局宣传中心</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 警花皇后资讯平台 版权所有 | 本站内容仅供学习与参考</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Simple FAQ Toggle Logic
+        document.addEventListener('DOMContentLoaded', function() {
+            const faqItems = document.querySelectorAll('.faq-item');
+            
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                question.addEventListener('click', () => {
+                    // Close other items
+                    faqItems.forEach(otherItem => {
+                        if (otherItem !== item) {
+                            otherItem.classList.remove('active');
+                        }
+                    });
+                    // Toggle current item
+                    item.classList.toggle('active');
+                });
+            });
+        });
+    </script>
+</body>
+</html>
